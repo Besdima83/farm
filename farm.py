@@ -1,14 +1,10 @@
-from bird import Bird
-
-
-class Farm(Bird):
+class Farm:
     def __init__(self):
-        super().__init__()
+        pass
 
-    def pick_up_eggs(self):
-        name = self.get_name()
-        egg = self.get_eggs()
-        if self.im_home_bird():
-            print(f"У птицы {name} {egg} яиц")
+    def pick_up_eggs(self, bird):
+        if bird.im_home_bird():
+            print(f"У птицы {bird.get_name()} {bird.get_eggs()} яиц")
         else:
-            print(f"У птицы {name} нет яиц")
+            print(f"У птицы {bird.get_name()} нет яиц")
+

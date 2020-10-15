@@ -3,10 +3,13 @@ class Bird:
         pass
 
     def get_name(self):
-        return str
+        return "Не знаю что за тварь"
 
     def get_eggs(self):
-        return int
+        return 0
 
     def im_home_bird(self):
-        return bool
+        return True
+
+
+

@@ -1,26 +1,12 @@
-from typeBird import TypeBird
+from typeBird import HomeBird
+from typeBird import WildBird
 
 
-class Chicken(TypeBird):
-    def __init__(self, name="Курица", egg=6):
-        super().__init__(home_bird=True)
-        self.name = name
-        self.egg = egg
-
-    def get_name(self):
-        return self.name
-
-    def get_eggs(self):
-        return self.egg
-
-    def im_home_bird(self):
-        return self.home_bird
-
-class Goose(TypeBird):
-    def __init__(self, name="Гусь", egg=9):
-        super().__init__(home_bird=True)
-        self.name = name
-        self.egg = egg
+class Chicken(HomeBird):
+    def __init__(self):
+        super().__init__()
+        self.name = "Курица"
+        self.egg = 5
 
     def get_name(self):
         return self.name
@@ -32,10 +18,26 @@ class Goose(TypeBird):
         return self.home_bird
 
 
-class Sparrow(TypeBird):
-    def __init__(self, name="Воробей"):
-        super().__init__(home_bird=False)
-        self.name = name
+class Goose(HomeBird):
+    def __init__(self):
+        super().__init__()
+        self.name = "Гусь"
+        self.egg = 8
+
+    def get_name(self):
+        return self.name
+
+    def get_eggs(self):
+        return self.egg
+
+    def im_home_bird(self):
+        return self.home_bird
+#
+#
+class Sparrow(WildBird):
+    def __init__(self):
+        super().__init__()
+        self.name = "Воробей"
 
     def get_name(self):
         return self.name
@@ -43,14 +45,13 @@ class Sparrow(TypeBird):
     def im_home_bird(self):
         return self.home_bird
 
-class Dove(TypeBird):
-    def __init__(self, name="Голубь"):
-        super().__init__(home_bird=False)
-        self.name = name
+class Dove(WildBird):
+    def __init__(self):
+        super().__init__()
+        self.name = "Голубь"
 
     def get_name(self):
-        return  self.name
+        return self.name
 
     def im_home_bird(self):
         return self.home_bird
-

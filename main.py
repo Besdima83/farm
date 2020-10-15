@@ -4,14 +4,16 @@ from nameBird import Goose
 from nameBird import Dove
 from farm import Farm
 
+farm = Farm()
 chicken = Chicken()
-Farm.pick_up_eggs(chicken)
-
-sparrow = Sparrow()
-Farm.pick_up_eggs(sparrow)
+farm.pick_up_eggs(chicken)
 
 goose = Goose()
-Farm.pick_up_eggs(goose)
+farm.pick_up_eggs(goose)
 
 dove = Dove()
-Farm.pick_up_eggs(dove)
+farm.pick_up_eggs(dove)
+
+
+sparrow = Sparrow()
+farm.pick_up_eggs(sparrow)
